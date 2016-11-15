@@ -1,44 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <meta content='<%= user_signed_in? ? current_user.id : "" %>' name='user-id'/>
-
-  <title>Chatty</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>NauKhan</title>
   <%= csrf_meta_tags %>
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
 
-<%= render 'layouts/nav' %>
+<nav class="navbar navbar-dark bg-inverse">
+  <%= link_to 'NauKhan', root_path, class: 'navbar-brand' %>
+
+  <% if user_signed_in? %>
+    <ul class="nav navbar-nav pull-xs-right">
+      <li class="nav-item">
+        <span class="text-muted">Logged in as <strong><%= current_user.name %></strong></span>
+      </li>
+      <li class="nav-item active">
+        <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+      </li>
+    </ul>
+  <% end %>
+</nav>
 
 <div class="container">
-  <% if alert %>
-      <div class="alert alert-danger" role="alert"><%= alert %></div>
-  <% end %>
-  <% if notice %>
-      <div class="alert alert-success" role="alert"><%= notice %></div>
-  <% end %>
-
-
   <%= yield %>
 </div>
-<audio id="chatAudio"><source src="/sounds/notification.mp3" type="audio/mpeg"></audio>
-</body>
 
+<footer>
+  <div class="container">
+    <p class="text-muted">Created for <%= link_to 'Nau Khan', 'http://karankrizz.com/' %></p>
+  </div>
+</footer>
+</body>
 </html>

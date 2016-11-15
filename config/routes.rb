@@ -1,20 +1,9 @@
 Rails.application.routes.draw do
-
   devise_for :users
 
-  authenticated :user do
-    root 'users#index'
-  end
+  resources :chat_rooms, only: [:new, :create, :show, :index]
 
-  unauthenticated :user do
-    devise_scope :user do
-      get "/" => "devise/sessions#new"
-    end
-  end
+  mount ActionCable.server => '/cable'
 
-  resources :conversations do
-    resources :messages
-  end
-
-
+  root 'chat_rooms#index'
 end

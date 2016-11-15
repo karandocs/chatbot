@@ -1,0 +1,717 @@
+Started GET "/" for ::1 at 2016-11-15 21:54:04 +0530
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.0.rc1) lib/active_record/migration.rb:572:in `check_pending!'
+activerecord (5.0.0.rc1) lib/active_record/migration.rb:548:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.rc1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.rc1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.rc1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.rc1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.rc1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.rc1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.rc1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.rc1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.rc1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.0.rc1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.0.rc1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.rc1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.0.rc1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.rc1) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.0ms)
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20160614153956)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160614153956"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateChatRooms (20160614154115)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "chat_rooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_chat_rooms_on_user_id" ON "chat_rooms" ("user_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160614154115"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMessages (20160614154147)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "user_id" integer, "chat_room_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_messages_on_user_id" ON "messages" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_messages_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_messages_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_messages_on_chat_room_id" ON "messages" ("chat_room_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160614154147"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" ORDER BY "ar_internal_metadata"."key" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-11-15 16:24:20 UTC], ["updated_at", 2016-11-15 16:24:20 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_chat_rooms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_chat_rooms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_messages_on_chat_room_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_messages_on_chat_room_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_messages_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_messages_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for ::1 at 2016-11-15 21:54:23 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-11-15 21:54:23 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 2867ms (Views: 2849.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-6c2e627411b1495c0ac953149042d656f93a50637e64bcdeac783980ebacc7c1.css?body=1" for ::1 at 2016-11-15 21:54:26 +0530
+Started GET "/assets/turbolinks.self-ff1d37d088bcba87ddd5a9edcbdbf45f1103309d3785dfd2324d668bde626e5d.js?body=1" for ::1 at 2016-11-15 21:54:26 +0530
+Started GET "/assets/channels/rooms.self-624f25abd37599882f2e5744cd4fbfaff89cbb19acee146cee142b84a45c9593.js?body=1" for ::1 at 2016-11-15 21:54:26 +0530
+Started GET "/assets/action_cable.self-97a1acc11db2782c1b61ce874bff887f64e903d3cb2b533eff50fb799c873c70.js?body=1" for ::1 at 2016-11-15 21:54:26 +0530
+Started GET "/assets/application.self-b89234cf2659d7fedea75bca0b8d231ad7dfc2f3f57fcbaf5f44ed9dc384137b.js?body=1" for ::1 at 2016-11-15 21:54:26 +0530
+Started GET "/users/sign_up" for ::1 at 2016-11-15 21:54:29 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 56ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-11-15 21:54:39 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KYiSyxiTG7Rv+QcfMZl3s2ttV/RpzlHTxVj/scQCHP0w6Wm73KKv7vhHe+4Mc1ZYZ/Ga+ECzd37FElM6rxgvJg==", "user"=>{"email"=>"karan@commutatus.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.0.0.rc1) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
+actionpack (5.0.0.rc1) lib/action_controller/metal/request_forgery_protection.rb:223:in `handle_unverified_request'
+devise (4.1.1) lib/devise/controllers/helpers.rb:253:in `handle_unverified_request'
+actionpack (5.0.0.rc1) lib/action_controller/metal/request_forgery_protection.rb:218:in `verify_authenticity_token'
+activesupport (5.0.0.rc1) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.0.rc1) lib/active_support/callbacks.rb:169:in `block (2 levels) in halting'
+actionpack (5.0.0.rc1) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.0.0.rc1) lib/active_support/callbacks.rb:170:in `block in halting'
+activesupport (5.0.0.rc1) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.0.rc1) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.0.rc1) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.0.rc1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.0.rc1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.0.rc1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.rc1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.0.rc1) lib/action_controller/metal/rescue.rb:31:in `process_action'
+actionpack (5.0.0.rc1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.0.rc1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.0.rc1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.0.rc1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.0.rc1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.0.rc1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.0.rc1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.0.rc1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.0.rc1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0.rc1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0.rc1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0.rc1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0.rc1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0.rc1) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.0.0.rc1) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.0.rc1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.rc1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.rc1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.rc1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+actionview (5.0.0.rc1) lib/action_view/digestor.rb:12:in `call'
+warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+warden (1.2.6) lib/warden/manager.rb:34:in `call'
+rack (2.0.0.rc1) lib/rack/etag.rb:25:in `call'
+rack (2.0.0.rc1) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.0.rc1) lib/rack/head.rb:12:in `call'
+rack (2.0.0.rc1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.0.rc1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.rc1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.rc1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.rc1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.rc1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.rc1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.rc1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.rc1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.rc1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.rc1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.rc1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.0.rc1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.0.rc1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.rc1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.0.rc1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.rc1) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.9ms)
+Started GET "/users" for ::1 at 2016-11-15 21:54:48 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.rc1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.rc1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.rc1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.rc1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.rc1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.rc1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.0.rc1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.0.rc1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.rc1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.rc1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.0.rc1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.rc1) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered collection of /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [21 times] (17.9ms)
+  Rendered /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.0ms)
+  Rendering /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/Karan/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (114.8ms)
+Started GET "/" for ::1 at 2016-11-15 21:54:58 +0530
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-11-15 21:54:58 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 58ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-6c2e627411b1495c0ac953149042d656f93a50637e64bcdeac783980ebacc7c1.css?body=1" for ::1 at 2016-11-15 21:54:58 +0530
+Started GET "/assets/jquery2.self-0a6570c8f60714fcfb2147cecaf229b5c0ffff626fe407344d3b00a2ad441b7c.js?body=1" for ::1 at 2016-11-15 21:54:58 +0530
+Started GET "/assets/action_cable.self-97a1acc11db2782c1b61ce874bff887f64e903d3cb2b533eff50fb799c873c70.js?body=1" for ::1 at 2016-11-15 21:54:58 +0530
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-11-15 21:54:58 +0530
+Started GET "/assets/channels/rooms.self-624f25abd37599882f2e5744cd4fbfaff89cbb19acee146cee142b84a45c9593.js?body=1" for ::1 at 2016-11-15 21:54:58 +0530
+Started GET "/assets/application.self-b89234cf2659d7fedea75bca0b8d231ad7dfc2f3f57fcbaf5f44ed9dc384137b.js?body=1" for ::1 at 2016-11-15 21:54:58 +0530
+Started GET "/assets/turbolinks.self-ff1d37d088bcba87ddd5a9edcbdbf45f1103309d3785dfd2324d668bde626e5d.js?body=1" for ::1 at 2016-11-15 21:54:58 +0530
+Started POST "/users/sign_in" for ::1 at 2016-11-15 21:55:02 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JDRT3S8kQzjNDTZM9dnmkfvhevaAwFYyxML0ZOuCwIodjNLngjoPvEy/dfMlJE6+Eri1zqH3IDIjIoCj1qdaew==", "user"=>{"email"=>"karan@commutatus.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "karan@commutatus.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JDRT3S8kQzjNDTZM9dnmkfvhevaAwFYyxML0ZOuCwIodjNLngjoPvEy/dfMlJE6+Eri1zqH3IDIjIoCj1qdaew==", "user"=>{"email"=>"karan@commutatus.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 189ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-11-15 21:55:05 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o/B8jk1w5AuzCXg9EwiC5GAYfdo0lYzbVBCXUPWe3TyaSP204G6ojzK7O4LD9SrLiUGy4hWi+tuz8OOXyLtHzQ==", "user"=>{"email"=>"karan@commutatus.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "karan@commutatus.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o/B8jk1w5AuzCXg9EwiC5GAYfdo0lYzbVBCXUPWe3TyaSP204G6ojzK7O4LD9SrLiUGy4hWi+tuz8OOXyLtHzQ==", "user"=>{"email"=>"karan@commutatus.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 164ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-11-15 21:55:06 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-11-15 21:55:13 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x2ODzqKTqRAph7EJJRFor7No6CukgCL+tYcyFovRoEWw2P4cSvG80R3QLMpyfFoj4Ci9TD07CCpqbh6fGH+thw==", "user"=>{"email"=>"karan@commutatus.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "karan@commutatus.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "karan@commutatus.com"], ["encrypted_password", "$2a$11$4h/2ooX8v2tFfnc.YtS/W.QTtb4VbjSyKSIYk/2Qi3/26A2wh8RKa"], ["created_at", 2016-11-15 16:25:13 UTC], ["updated_at", 2016-11-15 16:25:13 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2016-11-15 16:25:13 UTC], ["last_sign_in_at", 2016-11-15 16:25:13 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["updated_at", 2016-11-15 16:25:13 UTC], ["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 161ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2016-11-15 21:55:13 +0530
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.4ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 43ms (Views: 31.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/chat_rooms/new" for ::1 at 2016-11-15 21:55:15 +0530
+Processing by ChatRoomsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/new.html.erb within layouts/application
+  Rendered chat_rooms/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 88ms (Views: 76.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/chat_rooms" for ::1 at 2016-11-15 21:55:19 +0530
+Processing by ChatRoomsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4gLbkQjRNhmAaH5ixVy1k4eXSoIRjbQJJ1frv5vrC0bcEhQLOCGsnZ8oTZ9f/xrzjgA3AgWDi6U7Z712VqVvIA==", "chat_room"=>{"title"=>"hello"}, "commit"=>"Add!"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "chat_rooms" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "hello"], ["user_id", 1], ["created_at", 2016-11-15 16:25:19 UTC], ["updated_at", 2016-11-15 16:25:19 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/chat_rooms
+Completed 302 Found in 30ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/chat_rooms" for ::1 at 2016-11-15 21:55:19 +0530
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [1 times] (0.6ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 34ms (Views: 30.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chat_rooms/1" for ::1 at 2016-11-15 21:55:20 +0530
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 87ms (Views: 49.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/cable" for ::1 at 2016-11-15 21:55:20 +0530
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-15 21:55:20 +0530
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [karan@commutatus.com] Registered connection (Z2lkOi8vY2FibGUtY2hhdC9Vc2VyLzE)
+[ActionCable] [karan@commutatus.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [karan@commutatus.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+[ActionCable] [karan@commutatus.com] ChatRoomsChannel#send_message({"message"=>"hello", "chat_room_id"=>1})
+[ActionCable] [karan@commutatus.com]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActionCable] [karan@commutatus.com]   [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [karan@commutatus.com]   [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("body", "user_id", "chat_room_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "hello"], ["user_id", 1], ["chat_room_id", 1], ["created_at", 2016-11-15 16:25:24 UTC], ["updated_at", 2016-11-15 16:25:24 UTC]]
+[ActionCable] [karan@commutatus.com]   [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+[ActionCable] [karan@commutatus.com] [ActiveJob] Enqueued MessageBroadcastJob (Job ID: 387467ee-ec5f-4b91-b070-bdad52537e54) to Async(default) with arguments: #<GlobalID:0x007fc07230d3d0 @uri=#<URI::GID gid://cable-chat/Message/1>>
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [387467ee-ec5f-4b91-b070-bdad52537e54] Performing MessageBroadcastJob from Async(default) with arguments: #<GlobalID:0x007fc071b413b8 @uri=#<URI::GID gid://cable-chat/Message/1>>
+[ActiveJob] [MessageBroadcastJob] [387467ee-ec5f-4b91-b070-bdad52537e54]   [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [387467ee-ec5f-4b91-b070-bdad52537e54]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [387467ee-ec5f-4b91-b070-bdad52537e54]   Rendered messages/_message.html.erb (3.7ms)
+[ActiveJob] [MessageBroadcastJob] [387467ee-ec5f-4b91-b070-bdad52537e54] [ActionCable] Broadcasting to chat_rooms_1_channel: {:message=>"<div class=\"card\">\n  <div class=\"card-block\">\n    <div class=\"row\">\n      <div class=\"col-md-1\">\n        <img alt=\"karan\" src=\"https://www.gravatar.com/avatar/bdd2300a0ff861a42fc443c4bcee7937?s=40\" />\n      </div>\n      <div class=\"col-md-11\">\n        <p class=\"card-text\">\n          <span class=\"text-muted\">karan at 16:25:24 15 November 2016 says</span><br>\n          hello\n        </p>\n      </div>\n    </div>\n\n  </div>\n</div>"}
+[ActiveJob] [MessageBroadcastJob] [387467ee-ec5f-4b91-b070-bdad52537e54] Performed MessageBroadcastJob from Async(default) in 20.95ms
+[ActionCable] [karan@commutatus.com] ChatRoomsChannel transmitting {"message"=>"<div class=\"card\">\n  <div class=\"card-block\">\n    <div class=\"row\">\n      <div class=\"col-md-1\">\n        <img alt=\"karan\" src=\"https://www.gravatar.com/avatar/bdd2300a0ff861a42fc443c4bcee7937?s=40\" />\n      </div>\n      <div class=\"col-md-11\">\n        <p class=\"... (via streamed from chat_rooms_1_channel)
+[ActionCable] [karan@commutatus.com] ChatRoomsChannel#send_message({"message"=>"hey", "chat_room_id"=>1})
+[ActionCable] [karan@commutatus.com]   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[ActionCable] [karan@commutatus.com]   [1m[36mChatRoom Load (0.5ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [karan@commutatus.com]   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("body", "user_id", "chat_room_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "hey"], ["user_id", 1], ["chat_room_id", 1], ["created_at", 2016-11-15 16:25:30 UTC], ["updated_at", 2016-11-15 16:25:30 UTC]]
+[ActionCable] [karan@commutatus.com]   [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActionCable] [karan@commutatus.com] [ActiveJob] Enqueued MessageBroadcastJob (Job ID: a8f61990-fff5-4db0-b52f-5f7e8bb97906) to Async(default) with arguments: #<GlobalID:0x007fc06bb6aca0 @uri=#<URI::GID gid://cable-chat/Message/2>>
+[ActiveJob] [MessageBroadcastJob] [a8f61990-fff5-4db0-b52f-5f7e8bb97906] Performing MessageBroadcastJob from Async(default) with arguments: #<GlobalID:0x007fc071b03900 @uri=#<URI::GID gid://cable-chat/Message/2>>
+[ActiveJob] [MessageBroadcastJob] [a8f61990-fff5-4db0-b52f-5f7e8bb97906]   [1m[36mChatRoom Load (0.1ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [a8f61990-fff5-4db0-b52f-5f7e8bb97906]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [a8f61990-fff5-4db0-b52f-5f7e8bb97906]   Rendered messages/_message.html.erb (1.6ms)
+[ActiveJob] [MessageBroadcastJob] [a8f61990-fff5-4db0-b52f-5f7e8bb97906] [ActionCable] Broadcasting to chat_rooms_1_channel: {:message=>"<div class=\"card\">\n  <div class=\"card-block\">\n    <div class=\"row\">\n      <div class=\"col-md-1\">\n        <img alt=\"karan\" src=\"https://www.gravatar.com/avatar/bdd2300a0ff861a42fc443c4bcee7937?s=40\" />\n      </div>\n      <div class=\"col-md-11\">\n        <p class=\"card-text\">\n          <span class=\"text-muted\">karan at 16:25:30 15 November 2016 says</span><br>\n          hey\n        </p>\n      </div>\n    </div>\n\n  </div>\n</div>"}
+[ActiveJob] [MessageBroadcastJob] [a8f61990-fff5-4db0-b52f-5f7e8bb97906] Performed MessageBroadcastJob from Async(default) in 16.08ms
+[ActionCable] [karan@commutatus.com] ChatRoomsChannel transmitting {"message"=>"<div class=\"card\">\n  <div class=\"card-block\">\n    <div class=\"row\">\n      <div class=\"col-md-1\">\n        <img alt=\"karan\" src=\"https://www.gravatar.com/avatar/bdd2300a0ff861a42fc443c4bcee7937?s=40\" />\n      </div>\n      <div class=\"col-md-11\">\n        <p class=\"... (via streamed from chat_rooms_1_channel)
+[ActionCable] [karan@commutatus.com] Finished "/cable/" [WebSocket] for ::1 at 2016-11-15 21:55:47 +0530
+[ActionCable] [karan@commutatus.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started GET "/" for ::1 at 2016-11-15 23:33:56 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-11-15 23:33:56 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 323ms (Views: 312.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-11-15 23:33:56 +0530
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-11-15 23:33:56 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery2.self-0a6570c8f60714fcfb2147cecaf229b5c0ffff626fe407344d3b00a2ad441b7c.js?body=1" for ::1 at 2016-11-15 23:33:56 +0530
+Started POST "/users/sign_in" for ::1 at 2016-11-15 23:34:02 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IpwABMQuAU/zpU+/44BiK85q8RnG4v5jcm5mvolskP6Sw22U2lWfscgTjTQlMFvl+wX2ikBtxw8j5GB6VEITZQ==", "user"=>{"email"=>"karan@commutatus.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "karan@commutatus.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-11-15 18:04:02 UTC], ["sign_in_count", 2], ["updated_at", 2016-11-15 18:04:02 UTC], ["id", 1]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 171ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2016-11-15 23:34:02 +0530
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.6ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [1 times] (0.7ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 44ms (Views: 32.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/chat_rooms/new" for ::1 at 2016-11-15 23:34:09 +0530
+Processing by ChatRoomsController#new as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/new.html.erb within layouts/application
+  Rendered chat_rooms/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 63ms (Views: 56.6ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/chat_rooms" for ::1 at 2016-11-15 23:34:13 +0530
+Processing by ChatRoomsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R71LvLmo8UCX9ZKUjV5WfZDT00O9vh+12OvyCFa3fhWks/mCPznuUuzpiO1edK8juCvFW8BC7DRp//anxfbHbQ==", "chat_room"=>{"title"=>"chennai"}, "commit"=>"Add!"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "chat_rooms" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "chennai"], ["user_id", 1], ["created_at", 2016-11-15 18:04:13 UTC], ["updated_at", 2016-11-15 18:04:13 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/chat_rooms
+Completed 302 Found in 31ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/chat_rooms" for ::1 at 2016-11-15 23:34:13 +0530
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.1ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (0.5ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chat_rooms/2" for ::1 at 2016-11-15 23:34:15 +0530
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 2[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 59ms (Views: 28.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cable" for ::1 at 2016-11-15 23:34:15 +0530
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-15 23:34:15 +0530
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [karan@commutatus.com] Registered connection (Z2lkOi8vY2FibGUtY2hhdC9Vc2VyLzE)
+[ActionCable] [karan@commutatus.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [karan@commutatus.com] ChatRoomsChannel is streaming from chat_rooms_2_channel
+[ActionCable] [karan@commutatus.com] ChatRoomsChannel#send_message({"message"=>"hello", "chat_room_id"=>2})
+[ActionCable] [karan@commutatus.com]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActionCable] [karan@commutatus.com]   [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActionCable] [karan@commutatus.com]   [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "messages" ("body", "user_id", "chat_room_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "hello"], ["user_id", 1], ["chat_room_id", 2], ["created_at", 2016-11-15 18:04:18 UTC], ["updated_at", 2016-11-15 18:04:18 UTC]]
+[ActionCable] [karan@commutatus.com]   [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+[ActionCable] [karan@commutatus.com] [ActiveJob] Enqueued MessageBroadcastJob (Job ID: 74c9d7d7-cfa7-47b0-a123-e935305afcaa) to Async(default) with arguments: #<GlobalID:0x007fee7f938f80 @uri=#<URI::GID gid://cable-chat/Message/3>>
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [74c9d7d7-cfa7-47b0-a123-e935305afcaa] Performing MessageBroadcastJob from Async(default) with arguments: #<GlobalID:0x007fee7d843b18 @uri=#<URI::GID gid://cable-chat/Message/3>>
+[ActiveJob] [MessageBroadcastJob] [74c9d7d7-cfa7-47b0-a123-e935305afcaa]   [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [74c9d7d7-cfa7-47b0-a123-e935305afcaa]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [74c9d7d7-cfa7-47b0-a123-e935305afcaa]   Rendered messages/_message.html.erb (3.7ms)
+[ActiveJob] [MessageBroadcastJob] [74c9d7d7-cfa7-47b0-a123-e935305afcaa] [ActionCable] Broadcasting to chat_rooms_2_channel: {:message=>"<div class=\"card\">\n  <div class=\"card-block\">\n    <div class=\"row\">\n      <div class=\"col-md-1\">\n        <img alt=\"karan\" src=\"https://www.gravatar.com/avatar/bdd2300a0ff861a42fc443c4bcee7937?s=40\" />\n      </div>\n      <div class=\"col-md-11\">\n        <p class=\"card-text\">\n          <span class=\"text-muted\">karan at 18:04:18 15 November 2016 says</span><br>\n          hello\n        </p>\n      </div>\n    </div>\n\n  </div>\n</div>"}
+[ActiveJob] [MessageBroadcastJob] [74c9d7d7-cfa7-47b0-a123-e935305afcaa] Performed MessageBroadcastJob from Async(default) in 25.09ms
+[ActionCable] [karan@commutatus.com] ChatRoomsChannel transmitting {"message"=>"<div class=\"card\">\n  <div class=\"card-block\">\n    <div class=\"row\">\n      <div class=\"col-md-1\">\n        <img alt=\"karan\" src=\"https://www.gravatar.com/avatar/bdd2300a0ff861a42fc443c4bcee7937?s=40\" />\n      </div>\n      <div class=\"col-md-11\">\n        <p class=\"... (via streamed from chat_rooms_2_channel)
+Started GET "/" for ::1 at 2016-11-16 00:10:13 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (0.5ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 257ms (Views: 220.6ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-11-16 00:10:26 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PMDhWLUaVTnG2fiwKjDVSCRtZzYqEt4quztlksxvNTIbMmzf4Em7KE6DO/j4Sk2c7tFhgnbvlwKamiqT/Vjybw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-11-16 00:10:26 +0530
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-11-16 00:10:26 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-11-16 00:10:33 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7PfVEZTVzL3IMGnyjyHN9nfQhm2N7fC4CjIwW/yoiI5RTuNMo8V7NSz9yojnjEZCahUfVUMGuuKf/hdFqS9TcQ==", "user"=>{"email"=>"karan@commutatus.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "karan@commutatus.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2016-11-15 18:40:34 UTC], ["last_sign_in_at", 2016-11-15 18:04:02 UTC], ["sign_in_count", 3], ["updated_at", 2016-11-15 18:40:34 UTC], ["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 171ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-11-16 00:10:34 +0530
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (0.5ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 32ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-11-16 00:11:41 +0530
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.1ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (0.5ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 59ms (Views: 52.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/chat_rooms/2" for ::1 at 2016-11-16 00:11:49 +0530
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 2[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [1 times] (4.7ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 76ms (Views: 37.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cable" for ::1 at 2016-11-16 00:11:49 +0530
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-16 00:11:49 +0530
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [karan@commutatus.com] Registered connection (Z2lkOi8vY2FibGUtY2hhdC9Vc2VyLzE)
+[ActionCable] [karan@commutatus.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [karan@commutatus.com] ChatRoomsChannel is streaming from chat_rooms_2_channel
+Started GET "/chat_rooms/2" for ::1 at 2016-11-16 00:12:33 +0530
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 2[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [1 times] (3.0ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 55ms (Views: 50.1ms | ActiveRecord: 0.7ms)
+
+
+[ActionCable] [karan@commutatus.com] Finished "/cable/" [WebSocket] for ::1 at 2016-11-16 00:12:33 +0530
+[ActionCable] [karan@commutatus.com] ChatRoomsChannel stopped streaming from chat_rooms_2_channel
+Started GET "/cable" for ::1 at 2016-11-16 00:12:33 +0530
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-16 00:12:33 +0530
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [karan@commutatus.com] Registered connection (Z2lkOi8vY2FibGUtY2hhdC9Vc2VyLzE)
+[ActionCable] [karan@commutatus.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [karan@commutatus.com] ChatRoomsChannel is streaming from chat_rooms_2_channel
+Started GET "/chat_rooms/2" for ::1 at 2016-11-16 00:12:36 +0530
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.1ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 2[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [1 times] (2.4ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 45ms (Views: 40.3ms | ActiveRecord: 0.5ms)
+
+
+[ActionCable] [karan@commutatus.com] Finished "/cable/" [WebSocket] for ::1 at 2016-11-16 00:12:36 +0530
+[ActionCable] [karan@commutatus.com] ChatRoomsChannel stopped streaming from chat_rooms_2_channel
+Started GET "/cable" for ::1 at 2016-11-16 00:12:36 +0530
+Started GET "/cable/" [WebSocket] for ::1 at 2016-11-16 00:12:36 +0530
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [karan@commutatus.com] Registered connection (Z2lkOi8vY2FibGUtY2hhdC9Vc2VyLzE)
+[ActionCable] [karan@commutatus.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [karan@commutatus.com] ChatRoomsChannel is streaming from chat_rooms_2_channel
+Started GET "/" for ::1 at 2016-11-16 00:12:38 +0530
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.1ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (0.7ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 45ms (Views: 40.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-11-16 00:12:39 +0530
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.1ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (0.7ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 42ms (Views: 37.9ms | ActiveRecord: 0.4ms)
+
+
+[ActionCable] [karan@commutatus.com] Finished "/cable/" [WebSocket] for ::1 at 2016-11-16 00:12:39 +0530
+[ActionCable] [karan@commutatus.com] ChatRoomsChannel stopped streaming from chat_rooms_2_channel
+Started GET "/" for ::1 at 2016-11-16 00:13:00 +0530
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (0.6ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 33ms (Views: 28.7ms | ActiveRecord: 0.4ms)
+
+
